@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  dip:
+    container_name: apresentacao
+    build:
+      context: ./
+    volumes:
+      - ./exemplos/:/var/www/apresentacao/exemplos
+      - ./data/apache/conf.d/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+      - ./data/apache/conf.d/error_reporting.ini:/usr/local/etc/php/conf.d/error_reporting.ini
+      - ./data/localtime:/etc/localtime:ro
+      - ./data/timezone:/etc/timezone:ro
+    ports:
+      - "5021:5021"

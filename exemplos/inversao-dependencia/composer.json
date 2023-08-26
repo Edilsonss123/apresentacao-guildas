@@ -1,0 +1,19 @@
+{
+    "name": "root/inversao-dependencia",
+    "require": {
+        "php-di/php-di": "^7.0",
+        "izniburak/router": "^2.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "src/",
+            "Router\\": "router/src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "edilson",
+            "email": "edilson016@outlook.com"
+        }
+    ]
+}
