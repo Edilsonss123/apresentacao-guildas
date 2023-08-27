@@ -1,3 +1,4 @@
 exemplos/*/vendor/
-exemplos/jwt/.env
+exemplos/*/.env
+exemplos/*/*.txt
 *.txt
