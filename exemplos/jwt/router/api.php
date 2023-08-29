@@ -17,6 +17,10 @@ $router = new CustomRouter([
     ],
 ]);
 
+$router->get('', function() {
+    echo "Bem vindo";
+});
+
 
 $router->group('api', function($router) {
     $router->group('autenticacao', function($router) {

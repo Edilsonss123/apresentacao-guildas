@@ -1,0 +1,15 @@
+version: '3.3'
+
+services:
+  dip:
+    container_name: injecao-dependencia
+    build:
+      context: ./../../DockerFile/php/
+    volumes:
+      - ./:/var/www/apps/injecao-dependencia
+      - ./../../DockerFile/php/data/apache/conf.d/xdebug.ini:/usr/local/etc/php/conf.d/docker-php-ext-xdebug.ini
+      - ./../../DockerFile/php/data/apache/conf.d/error_reporting.ini:/usr/local/etc/php/conf.d/error_reporting.ini
+      - ./../../DockerFile/php/data/localtime:/etc/localtime:ro
+      - ./../../DockerFile/php/data/timezone:/etc/timezone:ro
+    ports:
+      - "5021:5021"
