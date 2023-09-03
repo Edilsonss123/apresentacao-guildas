@@ -1,4 +1,10 @@
 exemplos/*/vendor/
 exemplos/*/.env
+exemplos/*/*.obj
+exemplos/kafka-streams/data/*
+exemplos/kafka-streams/dotnet/ProducerKafka/obj
+exemplos/kafka-streams/dotnet/ProducerKafka/bin
+exemplos/kafka-streams/dotnet/ConsumerKafka/obj
+exemplos/kafka-streams/dotnet/ConsumerKafka/bin
 exemplos/*/*.txt
 *.txt
