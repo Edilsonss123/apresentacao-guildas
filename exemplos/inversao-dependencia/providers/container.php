@@ -7,7 +7,7 @@ use function \DI\get;
 
 $containerBuilder = new ContainerBuilder;
 $containerBuilder->addDefinitions([
-    IExemplo::class => get(ExemploService::class),
+    IExemplo::class => create(ExemploService::class)->construct(...),
 ]);
 
 $containerProvider = $containerBuilder->build();

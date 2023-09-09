@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option csharp_namespace = "cliente_g_rpc.Protos";
+
+package user;
+
+// The greeting service definition.
+service User {
+  // Sends a greeting
+  rpc NewUser (NewUserRequest) returns (UserReply);
+  rpc NewUserStream (NewUserRequest) returns (stream UserReply);
+}
+
+// The request message containing the user's name.
+message NewUserRequest {
+  string name = 1;
+  string lastName = 2;
+}
+
+// The response message containing the greetings.
+message UserReply {
+  string message = 1;
+}

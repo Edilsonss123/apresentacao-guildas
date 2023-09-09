@@ -1,0 +1,30 @@
+version: '3'
+services:
+  dotnet-server-g-rpc:
+    container_name: dotnet-server-g-rpc
+    build: 
+      context: ./../
+      dockerfile: DockerFile
+    tty: true
+    restart: always
+    networks: 
+      - net
+    ports:
+    - 5062:5062
+    - 7237:7237
+    volumes:
+      - ./dotnet/server-g-rpc:/projetos
+  dotnet-client-g-rpc:
+    container_name: dotnet-client-g-rpc
+    build: 
+      context: ./../
+      dockerfile: DockerFile
+    tty: true
+    restart: always
+    networks: 
+      - net
+    volumes:
+      - ./dotnet/client-g-rpc:/projetos
+networks: 
+  net:
+    driver: bridge
